@@ -11,7 +11,7 @@ This project was originally developed by [Ahmed Hadjou](https://github.com/hidjo
  - Minor UI changes and improvements
 
 <h2 align="center">
-  <img src="https://github.com/armanabkar/eCommerce_MERN/blob/master/screenshots/HomePage.png" alt="React Twitter" width="650px" />
+  <img src="https://github.com/armanabkar/classsed-graphql-mern-apollo/blob/master/screenshots.gif" alt="React Twitter" width="650px" />
   <br>
 </h2>
 

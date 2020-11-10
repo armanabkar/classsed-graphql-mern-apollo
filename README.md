@@ -2,6 +2,11 @@
 
 > Twitter clone built with the MERN stack + GraphQL.
 
+<h2 align="center">
+  <img src="https://github.com/armanabkar/classsed-graphql-mern-apollo/blob/master/screenshots.gif" alt="React Twitter" width="650px" />
+  <br>
+</h2>
+
 This project was originally developed by [Ahmed Hadjou](https://github.com/hidjou/classsed-graphql-mern-apollo) and modified by [Arman Abkar](https://github.com/armanabkar/classsed-graphql-mern-apollo).
 
 **New Feutures:**
@@ -10,10 +15,6 @@ This project was originally developed by [Ahmed Hadjou](https://github.com/hidjo
  - Mobile Responsive
  - Minor UI changes and improvements
 
-<h2 align="center">
-  <img src="https://github.com/armanabkar/classsed-graphql-mern-apollo/blob/master/screenshots.gif" alt="React Twitter" width="650px" />
-  <br>
-</h2>
 
 ## Usage
 

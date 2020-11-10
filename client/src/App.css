@@ -14,3 +14,22 @@
 .ui.teal.buttons .button:focus {
   background-color: #00b5ad;
 }
+
+.title {
+  color: #2184d0c2;
+  font-size: 2.2rem;
+}
+
+.welcome {
+  font-size: 6rem;
+}
+
+.profilePic {
+  border-radius: 0.28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.link {
+  margin: 1rem;
+}
+

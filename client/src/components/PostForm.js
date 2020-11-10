@@ -1,26 +1,26 @@
-import React from 'react';
-import { Button, Form } from 'semantic-ui-react';
-import gql from 'graphql-tag';
-import { useMutation } from '@apollo/react-hooks';
+import React from "react";
+import { Button, Form } from "semantic-ui-react";
+import gql from "graphql-tag";
+import { useMutation } from "@apollo/react-hooks";
 
-import { useForm } from '../util/hooks';
-import { FETCH_POSTS_QUERY } from '../util/graphql';
+import { useForm } from "../util/hooks";
+import { FETCH_POSTS_QUERY } from "../util/graphql";
 
 function PostForm() {
   const { values, onChange, onSubmit } = useForm(createPostCallback, {
-    body: ''
+    body: "",
   });
 
   const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
     variables: values,
     update(proxy, result) {
       const data = proxy.readQuery({
-        query: FETCH_POSTS_QUERY
+        query: FETCH_POSTS_QUERY,
       });
       data.getPosts = [result.data.createPost, ...data.getPosts];
       proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
-      values.body = '';
-    }
+      values.body = "";
+    },
   });
 
   function createPostCallback() {
@@ -30,7 +30,6 @@ function PostForm() {
   return (
     <>
       <Form onSubmit={onSubmit}>
-        <h2>Create a post:</h2>
         <Form.Field>
           <Form.Input
             placeholder="Hi World!"
@@ -39,7 +38,7 @@ function PostForm() {
             value={values.body}
             error={error ? true : false}
           />
-          <Button type="submit" color="teal">
+          <Button type="submit" color="blue">
             Submit
           </Button>
         </Form.Field>

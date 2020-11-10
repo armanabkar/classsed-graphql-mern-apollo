@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import { Button, Label, Icon } from 'semantic-ui-react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/react-hooks";
+import gql from "graphql-tag";
+import { Button, Label, Icon } from "semantic-ui-react";
 
-import MyPopup from '../util/MyPopup';
+import MyPopup from "../util/MyPopup";
 
 function LikeButton({ user, post: { id, likeCount, likes } }) {
   const [liked, setLiked] = useState(false);
@@ -16,29 +16,29 @@ function LikeButton({ user, post: { id, likeCount, likes } }) {
   }, [user, likes]);
 
   const [likePost] = useMutation(LIKE_POST_MUTATION, {
-    variables: { postId: id }
+    variables: { postId: id },
   });
 
   const likeButton = user ? (
     liked ? (
-      <Button color="teal">
+      <Button color="blue">
         <Icon name="heart" />
       </Button>
     ) : (
-      <Button color="teal" basic>
+      <Button color="blue" basic>
         <Icon name="heart" />
       </Button>
     )
   ) : (
-    <Button as={Link} to="/login" color="teal" basic>
+    <Button as={Link} to="/login" color="blue" basic>
       <Icon name="heart" />
     </Button>
   );
 
   return (
     <Button as="div" labelPosition="right" onClick={likePost}>
-      <MyPopup content={liked ? 'Unlike' : 'Like'}>{likeButton}</MyPopup>
-      <Label basic color="teal" pointing="left">
+      <MyPopup content={liked ? "Unlike" : "Like"}>{likeButton}</MyPopup>
+      <Label basic color="blue" pointing="left">
         {likeCount}
       </Label>
     </Button>
